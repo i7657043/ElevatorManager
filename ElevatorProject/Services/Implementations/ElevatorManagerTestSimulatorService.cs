@@ -54,7 +54,7 @@ namespace ElevatorProject.Services.Implementations
 
 
             _manager.MakeElevatorManagerRequest(new Request { Floor = 1, RequestType = RequestType.WALL });
-            //Simulates 2 people getting into Elevatpr 1 and pressing Floor 3 and 5 buttons on panel
+            //Simulates 2 people getting into Elevatpr 2 and pressing Floor 3 and 5 buttons on panel
             _manager.MakeElevatorManagerRequest(new Request { Floor = 3, RequestType = RequestType.PANEL, ElevatorId = 2, });
             _manager.MakeElevatorManagerRequest(new Request { Floor = 5, RequestType = RequestType.PANEL, ElevatorId = 2, });
         }
