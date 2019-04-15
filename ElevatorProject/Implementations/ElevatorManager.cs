@@ -16,10 +16,13 @@ namespace ElevatorProject.Implementations
     {
         #region vars and constructor
         private readonly IElevatorService _elevatorService;
+
+        private List<IElevator> controlledElevators { get; set; }
+
         //Could have used a Queue as the List is more or less used like a queue
         //but the ability to inspect all requests when an Elevator is passing floors (and remove the element at any index on the fly) was wanted
         private List<Request> requestList { get; set; }
-        private List<IElevator> controlledElevators { get; set; }
+        
         
         public ElevatorManager(IElevatorService elevatorService)
         {

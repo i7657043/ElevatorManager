@@ -17,6 +17,10 @@ namespace ElevatorProject.Models
         private readonly double _maxWeight;
         private readonly int _topFloor;
 
+        private int currentFloor { get; set; }
+        private DoorStatus doorStatus { get; set; }
+        private ElevatorOperationStatus operationStatus { get; set; }
+
         public Elevator(int id, int bottomFloor, int topFloor, int startFloor, double maxWeight)
         {
             _id = id;
@@ -25,13 +29,8 @@ namespace ElevatorProject.Models
             _maxWeight = maxWeight;
 
             currentFloor = startFloor;
-
             operationStatus = ElevatorOperationStatus.AVAILABLE;
         }
-
-        private int currentFloor { get; set; }
-        private DoorStatus doorStatus { get; set; }
-        private ElevatorOperationStatus operationStatus { get; set; }
         #endregion
 
         public bool CloseDoors()
