@@ -61,13 +61,7 @@ namespace ElevatorProject.Extensions
 
         private static bool ElevatorIsOnACloserFloor(int lowerFloor, int higherFloor, int currentSmallestDifference)
         {
-            if (higherFloor - lowerFloor < currentSmallestDifference)
-            {
-                currentSmallestDifference = higherFloor - lowerFloor;
-                return true;
-            }
-
-            return false;
+            return (higherFloor - lowerFloor) < currentSmallestDifference;
         }
 
         private static int GetDifferenceBetweenFloors(int currentElevatorFloor, int requestedFloor)
