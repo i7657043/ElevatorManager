@@ -125,7 +125,7 @@ namespace ElevatorProject.Implementations
                 //Elevator cant travel in this direction any further
                 if (elevator.IsAtFloorRangeLimit())
                 {
-                    //break;
+                    break;
                 }
             }
 
